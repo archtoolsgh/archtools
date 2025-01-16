@@ -46,6 +46,10 @@ def health(request):
     return render(request, 'health.html')
 
 
+def explore(request):
+    return render(request, 'explore.html')
+
+
 def products(request):
     return render(request, 'products.html')
 

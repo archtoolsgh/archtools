@@ -8,6 +8,7 @@ urlpatterns = [
     path('architecture.html', views.architecture, name = 'architecture'),
     path('engineering.html', views.engineering, name = 'engineering'),
     path('health.html', views.health, name = 'health'),
+    path('explore.html', views.explore, name = 'explore'),
     path('cart.html', views.cart, name = 'cart'),
     path('checkout.html', views.checkout, name = 'checkout'),
     path('update_item', views.update_item, name ="update_item"),
