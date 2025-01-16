@@ -9,7 +9,7 @@
         {% comment %} <span>Order materials and apparatuses for medicine, pharmacy and nursing students</span> {% endcomment %}
     </div>
     <div style="" class="checkout-body">
-        <div class="cart-div">
+        <div data-aos-duration="1000" data-aos="fade-up" class="cart-div">
             <div class="cart-link">
                 <a href="{% url 'cart' %}"><i class="fas fa-arrow-left"></i>Back to Cart</a>
             </div>
@@ -19,7 +19,7 @@
             {% for item in items %}
             <div class="product-div">
                 <div>
-                    <img src="{{item.product.imageURL}}" alt="">
+                    <img src="{{item.product.imageURL}}" alt="Product Image" onerror="this.onerror=null; this.src='{% static 'assets/images/Archtools_clear.jpg' %}';">
                 </div>
                 <div>
                     <p>{{item.product.name}} </p>
@@ -38,7 +38,7 @@
                 <p>Total: GHS {{order.get_cart_total}} </p>
             </div>
         </div>
-        <div class="contain">
+        <div data-aos-duration="1000" data-aos="fade-up" class="contain">
             <h1>Receipt</h1>
             <form id="receiptForm" action="https://formspree.io/f/mgvvqbzn" method="POST">
                 <label for="receiptNo">Receipt No.:</label>
@@ -64,7 +64,7 @@
                 <button type="button" id="generateBtn">Generate Receipt</button>
             </form>
     
-            <div class="receipt" id="receiptPreview" style="display:none;">
+            <div data-aos-duration="1000" data-aos="fade-up" class="receipt" id="receiptPreview" style="display:none;">
                 <h2>Receipt</h2>
                 <div class="no-date">
                     <p><strong>Receipt No.:</strong> <span id="displayReceiptNo"></span></p>

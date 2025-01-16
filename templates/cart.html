@@ -10,7 +10,7 @@
     </div>
     <div class="section">
         <div class="card-main">
-            <div class="card1">
+            <div data-aos-duration="1000" data-aos="fade-up" class="card1">
                 <div>Items: {{order.get_cart_items}} </div>
                 <div>Total: GHS {{order.get_cart_total}} </div>
                 <div class="checkout-link">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             {% for item in items%}
-            <div class="card">
+            <div data-aos-duration="1000" data-aos="fade-up" class="card">
                 <div class="sub1">
                     <img src="{{item.product.imageURL}}" alt="Product Image" onerror="this.onerror=null; this.src='{% static 'assets/images/Archtools_clear.jpg' %}';">
                 </div>

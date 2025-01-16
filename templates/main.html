@@ -26,6 +26,8 @@
 
     <link rel="stylesheet" href={% static 'assets/css/lightbox.css' %}>
 
+    <link rel="stylesheet" href={% static 'assets/css/aos.css'%}>
+
 
     <script type="text/javascript">
         var user = '{{request.user}}'
@@ -102,7 +104,7 @@
                             <li class="scroll-to-section"><a href="{% url 'architecture' %}">Architecture</a></li>
                             <li class="scroll-to-section"><a href="{% url 'engineering' %}">Engineering</a></li>
                             <li class="scroll-to-section"><a href="{% url 'health' %}">Health Sciences</a></li>
-                            <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'explore' %}">Explore</a></li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -201,6 +203,10 @@
 
     <!-- Global Init -->
     <script src={% static 'assets/js/custom.js' %}></script>
+    <script src={% static 'assets/js/aos.js'%}></script>
+    <script>
+      AOS.init();
+    </script>
 
     <script>
 
