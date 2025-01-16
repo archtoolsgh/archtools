@@ -1,0 +1,118 @@
+{% extends 'main.html' %}
+{% load static %}
+
+    {% block content %}
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <div  class="thumb">
+                            <div class="inner-content">
+                                <h4>ArchTools</h4>
+                                <span>Home of precise, accurate &amp; quality drawing instruments</span>
+                                <div class="main-border-button">
+                                    <a href="#">Purchase Now!</a>
+                                </div>
+                            </div>
+                            <img src={% static 'assets/images/Archtools.jpg' %} alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div  style="background: rgba(0, 0, 0, .6); height: 100%; justify-content: center; display:flex; flex-direction: column" class="inner-content">
+                                            <h4>Architecture</h4>
+                                            <span>Tools for Architecture
+                                            </span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Architecture</h4>
+                                                <p>Order drawing, measuring and sketching tools for Architects</p>
+                                                <div class="main-border-button">
+                                                    <a href="{% url 'architecture' %}">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src={% static 'assets/images/architecture.jpg' %}>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div style="background: rgba(0, 0, 0, .6); height: 100%; justify-content: center; display:flex; flex-direction: column" class="inner-content">
+                                            <h4>Engineering</h4>
+                                            <span>Engineering tools and equipments</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Engineering</h4>
+                                                <p>Order quality tools and instruments for Engineering Students</p>
+                                                <div class="main-border-button">
+                                                    <a href="{% url 'engineering' %}">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src={% static 'assets/images/engineering.jpg' %}>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div style="background: rgba(0, 0, 0, .6); height: 100%; justify-content: center; display:flex; flex-direction: column" class="inner-content">
+                                            <h4>Health Sciences</h4>
+                                            <span>Health Science Apparatus</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Health Sciences</h4>
+                                                <p>Order materials and apparatuses for medicine, pharmacy and nursing students</p>
+                                                <div class="main-border-button">
+                                                    <a href="{% url 'health' %}">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src={% static 'assets/images/health.jpg' %}>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Packages</h4>
+                                            <span>Packages at affordable costs</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Packages</h4>
+                                                <p>Explore quality and affordable packages carefully curated for you..</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src={% static 'assets/images/baner-right-image-04.jpg' %}>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    {% endblock %}
+
+
+    

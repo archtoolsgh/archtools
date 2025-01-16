@@ -1,0 +1,82 @@
+{% extends 'main.html' %}
+{% load static %}
+    {% block content %}
+    <!-- ***** Main Banner Area Start ***** -->
+    <div style="background-image: url('{{ products.imageURL }}'), url('{% static 'assets/images/Archtools_clear.jpg' %}');" class="page-heading" id="top">
+        <div style="background: rgba(0, 0, 0, .6); width: 100vw; " > 
+            <div  class="container">
+                <div   class="row">
+                    <div class="col-lg-12">
+                        <div  class="inner-content">
+                            <h2>{{products.name}}</h2>
+                            <span >Be creative with Archtools</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Product Area Starts ***** -->
+    <section class="section" id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                <div class="left-images">
+                    {% if products.imageURL %}
+                    <img src="{{ products.imageURL }}" alt="Product Image" onerror="this.onerror=null; this.src='{% static 'assets/images/Archtools_clear.jpg' %}';">
+                    {% else %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="right-content">
+                    <h4>{{products.name}}</h4>
+                    <span class="price">GHS {{products.price}}</span>
+                    <ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+                    {% if products.detail %}
+                    <span style="color: rgba(0, 0, 0, .7)">{{products.detail}}</span>
+                    {% else %}
+                        {% for list in list %}
+                        <span style="color: rgba(0, 0, 0, .7)">- {{list}}</span>
+                        {% endfor %}
+                    {% endif %}
+                    <br><br>
+                    {% comment %} <div class="quote">
+                        <i class="fa fa-quote-left"></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>
+                    </div> {% endcomment %}
+                    {% comment %} <div class="quantity-content">
+                        <div class="left-content">
+                            <h6>No. of Orders</h6>
+                        </div>
+                        <div class="right-content">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                    <div style="display:flex; justify-content: space-between;" class="total">
+                        <div class="main-border-button"><a href="{% url 'cart' %}">Proceed To Cart</a></div>
+                        <div class="main-border-button"><a data-product={{products.id}} data-action="add" class="update-cart update">Add To Cart</a></div>
+                    </div>
+                    <br>
+                    <a style="color: black;" href="{% url 'architecture' %}">
+                        <i class="fas fa-arrow-left"></i>
+                        BACK</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Product Area Ends ***** -->
+    {% endblock %}
+
+    

@@ -1,0 +1,56 @@
+{% extends 'main.html' %}
+{% load static %}
+    {% block content %}
+    <link rel="stylesheet" href={% static 'assets/css/cart.css' %}>
+
+    <br><br>
+    
+    <div class="section-heading">
+        <h2>My Cart</h2>
+    </div>
+    <div class="section">
+        <div class="card-main">
+            <div class="card1">
+                <div>Items: {{order.get_cart_items}} </div>
+                <div>Total: GHS {{order.get_cart_total}} </div>
+                <div class="checkout-link">
+                    <a href="{% url 'architecture' %}">continue shopping</a>
+                    <a href="{% url 'checkout' %}"> checkout</a>
+                </div>
+            </div>
+            {% for item in items%}
+            <div class="card">
+                <div class="sub1">
+                    <img src="{{item.product.imageURL}}" alt="Product Image" onerror="this.onerror=null; this.src='{% static 'assets/images/Archtools_clear.jpg' %}';">
+                </div>
+                <div class="sub2">
+                    <div>
+                        <p>Item:</p>
+                        <p>{{item.product.name}} </p>
+                    </div>
+                    <div>
+                        <p>Price:</p>
+                        <p>{{item.product.price}} </p>
+                    </div>
+                    <div>
+                        <p>Quantity:</p>
+                        <p>{{item.quantity}}</p>
+                        <div class="quantity buttons_added" style="display:flex;">
+                            <input type="button" value="-" class="minus update-cart"  data-product={{item.product.id}} data-action="remove">
+                            <input type="button" value="+" class="plus update-cart" data-product={{item.product.id}} data-action="add">
+                        </div>
+                    </div>
+                    <div>
+                        <p>Total:</p>
+                        <p>GHS {{item.get_total}} </p>
+                    </div>
+                </div>
+                
+                
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+                
+
+    {% endblock %}

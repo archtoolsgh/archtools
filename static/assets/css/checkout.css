@@ -1,0 +1,257 @@
+
+
+
+/*checkout.css*/
+
+.checkout-body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.checkout-div-main{
+    gap:2em;
+    display:flex;
+    flex-direction: column;
+    
+}
+.checkout-div{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:20px;
+}
+.payment{
+    background-color: white;
+    box-shadow:1px 1px 4px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:20px;
+}
+.checkout-div{
+    /* min-height:45vh; */
+    min-width:35vw;
+}
+.checkout-div input{
+    padding:7px;
+    width:100%;
+}
+.hidden{
+    visibility: hidden;
+    display:none;
+}
+
+.checkout-div .name-form, .address-div1, .address-div2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:1em;
+}
+.checkout-body{
+    display:flex;
+    gap:20px;
+}
+.name-form{
+    border-bottom:1px solid lightgrey;
+    padding-bottom:20px;
+}
+.ship-info{
+    padding:20px 0px 20px 0px;
+    border-bottom:1px solid lightgray
+}
+.address-div{
+    padding:20px 0px 10px 0px ;
+    border-bottom: 1px solid lightgray;
+
+}
+.address-div div{
+    padding:0px 0px 10px 0px;
+}
+.checkout-btn{
+    text-align:center;
+    padding:20px 0px 0px 0px;
+    
+}
+.checkout-btn button:hover{
+    filter:brightness(.9);
+    
+}
+.checkout-btn button{
+    text-align:center;
+    color:white;
+    background-color: palevioletred;
+    border:none;
+    width:100%;
+    padding:10px;
+    cursor:pointer;
+    outline:none;
+}
+
+.cart-div{
+    background-color: rgb(255, 255, 255, .8);
+    box-shadow:1px 1px 4px black;
+    /* max-width:35vw; */
+    min-width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:20px;
+}
+.cart-link a{
+    text-decoration:none;
+    border:2px solid rgb(97, 94, 94);
+    padding:7px;
+    color:rgb(97, 94, 94);;
+    font-weight:bold;
+}
+.cart-link{
+    padding-bottom: 20px;
+    border-bottom:1px solid lightgray;
+}
+.order-info{
+    padding:20px 0px;
+    border-bottom:1px solid lightgray;
+    font-weight:bold;
+    font-size:20px;
+    color:rgb(97, 94, 94);
+}
+.product-div{
+    display:flex;
+    flex-direction:row;
+    border-bottom:1px solid lightgray;
+    padding:20px 0px;
+    height:50px;
+}
+.product-div div{
+    width:100%;
+    padding:0px 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.product-div img{
+    object-fit: center;
+    width:100%;
+    height:100%;
+}
+.item-div{
+    padding:10px 0px 0px 10px;
+}
+
+
+/* -----------------------receipt--------------------- */
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    /* margin: 20px; */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #4cae4c;
+}
+.receipt {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #080808;
+    border-radius: 5px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    /* width: 500px; */
+    text-align: left;
+}
+.no-date {
+    text-align: left;
+    margin-left: auto;
+    width: 140px;
+    
+}
+.from-amount {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.by {
+    width: 100%;
+    text-align: right;
+}
+.receipt h2 {
+    text-align: center;
+}
+.receipt p {
+    margin: 5px 0;
+    
+}
+.receipt p span {
+    border-bottom: 1px solid #080808;
+    width: auto;
+}
+#printBtn {
+    background-color: #337ab7;
+}
+
+#button-grp {
+    display: flex;
+    gap: 10px;
+}
+
+#button-grp button {
+    width: 100%;
+}
+
+/* Print styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .receipt, .receipt * {
+        visibility: visible;
+    }
+    .receipt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+}
