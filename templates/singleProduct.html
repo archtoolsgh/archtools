@@ -43,26 +43,17 @@
                         <li><i class="fa fa-star"></i></li>
                     </ul>
                     {% if products.detail %}
-                    <span style="color: rgba(0, 0, 0, .7)">{{products.detail}}</span>
+                    <div class="quote"> 
+                        <i class="fa fa-quote-left"></i><p style="padding-top:17px;">{{products.detail}}</p>
+                     </div> 
+                    {% comment %} <span style="color: rgba(0, 0, 0, .7)">{{products.detail}}</span> {% endcomment %}
                     {% else %}
                         {% for list in list %}
                         <span style="color: rgba(0, 0, 0, .7)">- {{list}}</span>
                         {% endfor %}
                     {% endif %}
                     <br><br>
-                    {% comment %} <div class="quote">
-                        <i class="fa fa-quote-left"></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>
-                    </div> {% endcomment %}
-                    {% comment %} <div class="quantity-content">
-                        <div class="left-content">
-                            <h6>No. of Orders</h6>
-                        </div>
-                        <div class="right-content">
-                            <div class="quantity buttons_added">
-                                <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-                            </div>
-                        </div>
-                    </div> {% endcomment %}
+                     
                     <div style="display:flex; justify-content: space-between;" class="total">
                         <div class="main-border-button"><a href="{% url 'cart' %}">Proceed To Cart</a></div>
                         <div class="main-border-button"><a data-product={{products.id}} data-action="add" class="update-cart update">Add To Cart</a></div>
