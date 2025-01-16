@@ -38,22 +38,22 @@
         </div>
         <div class="contain">
             <h1>Receipt</h1>
-            <form id="receiptForm">
+            <form id="receiptForm" action="https://formspree.io/f/mgvvqbzn" method="POST">
                 <label for="receiptNo">Receipt No.:</label>
-                <input type="text" id="receiptNo" required value="{{randomNum}}" readonly>
+                <input name="Receipt No.:" type="text" id="receiptNo" required value="{{randomNum}}" readonly>
     
                 <label for="date">Telephone:</label>
-                <input type="text" id="date" required value = "+233">
+                <input name="Telephone:" type="text" id="date" required value = "+233">
     
                 <label for="amount">Amount:</label>
-                <input type="text" id="amount" required value="GHS {{order.get_cart_total}}" readonly>
+                <input name="Amount" type="text" id="amount" required value="GHS {{order.get_cart_total}}" readonly>
     
                 <label for="from">From:</label>
-                <input type="text" id="from" required>
+                <input name="Name" type="text" id="from" required>
     
                 <label for="paymentFor">Payment For:</label>
                 {% for item in items %}
-                <input type="text" id="paymentFor" required value ="{{item.product.name}} - {{item.quantity}}  ({{item.product.price}} each)" readonly>
+                <input name="Item" type="text" id="paymentFor" required value ="{{item.product.name}} - {{item.quantity}}  ({{item.product.price}} each)" readonly>
                 {% endfor %}
     
                 {% comment %} <label for="receivedBy">Received By:</label>
