@@ -123,20 +123,25 @@
     display:flex;
     flex-direction:row;
     border-bottom:1px solid lightgray;
-    padding:20px 0px;
-    height:50px;
+    padding:10px 0px;
+    height:70px;
 }
 .product-div div{
     width:100%;
+    /* background-color:red; */
     padding:0px 20px;
     display:flex;
     flex-direction: column;
     justify-content: center;
 }
+
+
 .product-div img{
-    object-fit: center;
+    object-fit: cover;
+    object-position:center;
     width:100%;
     height:100%;
+    margin: 20px 0px;
 }
 .item-div{
     padding:10px 0px 0px 10px;
@@ -196,7 +201,7 @@ button:hover {
     background-color: #fafafa;
     display: flex;
     flex-direction: column;
-    /* width: 500px; */
+    width: 100%;
     text-align: left;
 }
 .no-date {
