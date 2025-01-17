@@ -26,7 +26,7 @@
                 </a>
             </div>
             <div style="text-align:center;">
-                <h5 style="padding-bottom: 7px; font-weight: 500;">Single Tools</h5>
+                <h5 style="padding-bottom: 7px; font-weight: 500;">Single Tools  <em style="color:red; padding-left:8vw; font-weight:bold; font-style:normal;">8% </em>discount(each)</h5>
                 <p style="color: rgba(0,0,0,0.25); "><i class="fas fa-arrow-left"> </i> Swipe left and right <i class="fas fa-arrow-right"></i></p>
                 <br>
             </div>
@@ -46,18 +46,19 @@
                                             <li><a href="{% url 'singleProduct' product.id %}"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src={{product.image}} alt="">
+                                    {% comment %} <img style="max-height: 250px; object-fit:contain" src={{product.image}} alt=""> {% endcomment %}
+                                    <img style="max-height: 250px; object-fit:contain" src={{product.image.first.image.url}} alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>{{product.name}}</h4>
                                     <span>GHS {{product.price}}</span>
-                                    <ul class="stars">
+                                    {% comment %} <ul class="stars">
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    </ul> {% endcomment %}
                                 </div>
                             </div>
                             {% endfor %}
@@ -69,7 +70,7 @@
         <br><br>
         <hr>
         <div style="text-align:center;">
-            <h5 style="padding-bottom: 7px; font-weight: 500;">Packages</h5>
+            <h5 style="padding-bottom: 7px; font-weight: 500;">Packages  <em style="color:red; padding-left:8vw; font-weight:bold; font-style:normal;">16% </em>discount(each)</h5>
             <p style="color: rgba(0,0,0,0.25); "><i class="fas fa-arrow-up"> </i> Scroll up and down <i class="fas fa-arrow-down"></i></p>
             <br>
         </div>

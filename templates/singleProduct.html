@@ -2,7 +2,7 @@
 {% load static %}
     {% block content %}
     <!-- ***** Main Banner Area Start ***** -->
-    <div style="background-image: url('{{ products.imageURL }}'), url('{% static 'assets/images/Archtools_clear.jpg' %}');" class="page-heading" id="top">
+    <div style="background-image: url('{{ products.image.first.image.url }}'), url('{% static 'assets/images/Archtools_clear.jpg' %}');" class="page-heading" id="top">
         <div style="background: rgba(0, 0, 0, .6); width: 100vw; " > 
             <div  class="container">
                 <div   class="row">
@@ -25,23 +25,26 @@
             <div class="row">
                 <div class="col-lg-8">
                 <div data-aos-duration="1000" data-aos="fade-up" class="left-images">
-                    {% if products.imageURL %}
-                    <img src="{{ products.imageURL }}" alt="Product Image" onerror="this.onerror=null; this.src='{% static 'assets/images/Archtools_clear.jpg' %}';">
-                    {% else %}
-                    {% endif %}
+                    {% comment %} {% if products.imageURL %} {% endcomment %}
+                    {% for product_image in products.image.all %}
+                    <img style="max-width: 250px" src="{{ product_image.image.url }}" alt="Product Image" onerror="this.onerror=null; this.src='{% static 'assets/images/Archtools_clear.jpg' %}';">
+                    {% endfor %}
+                    
+                    {% comment %} {% else %} {% endcomment %}
+                    {% comment %} {% endif %} {% endcomment %}
                 </div>
             </div>
             <div class="col-lg-4">
                 <div data-aos-duration="1000" data-aos="fade-up" class="right-content">
                     <h4>{{products.name}}</h4>
                     <span class="price">GHS {{products.price}}</span>
-                    <ul class="stars">
+                    {% comment %} <ul class="stars">
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
-                    </ul>
+                    </ul> {% endcomment %}
                     {% if products.detail %}
                     <div data-aos-duration="1000" data-aos="fade-up" class="quote"> 
                         <i class="fa fa-quote-left"></i><p style="padding-top:17px;">{{products.detail}}</p>
