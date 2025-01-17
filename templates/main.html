@@ -77,13 +77,13 @@
     <body>
     
     <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
+    {% comment %} <div id="preloader">
         <div class="jumper">
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>   {% endcomment %}
     <!-- ***** Preloader End ***** -->
     
     
@@ -150,7 +150,7 @@
                     <h4>Useful Links</h4>
                     <ul>
                         <li><a href="/">Homepage</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="{% url 'explore' %}">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
