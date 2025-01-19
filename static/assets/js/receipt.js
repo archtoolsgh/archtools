@@ -36,6 +36,7 @@ document.getElementById('editBtn').addEventListener('click', function() {
 });
 
 document.getElementById('printBtn').addEventListener('click', function() {
+    cart = {};
     window.print();
 });
 
