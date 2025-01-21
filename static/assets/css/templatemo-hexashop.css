@@ -1731,8 +1731,8 @@ Single Product Page
 }
 
 #product .left-images img {
-  width: 100%;
-  overflow: hidden;
+  /* width: 100%; */
+  /* overflow: hidden; */
   margin-bottom: 30px;
 }
 
@@ -2377,4 +2377,41 @@ responsive
   100% {
     opacity: 0;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body4{
+  /* height: 100vh; */
+  color: white;
+  text-align:center;
+  padding: 55px 0px;
+}
+
+.swiper{
+  height: 270px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px 0px;
+}
+
+.body4 img{
+  object-fit: contain;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
 }
